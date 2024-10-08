@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Password generator</h1>
+
+    <div class="optionsContainer">
+      <div id="options">
+        <div class="checkbox-wrapper-5">
+          <div class="check">
+            <input id="LowerCase" type="checkbox" />
+            <label for="LowerCase"></label>
+          </div>
+          <label for="LowerCase">Lower case</label>
+        </div>
+
+        <div class="checkbox-wrapper-5">
+          <div class="check">
+            <input id="CapitalCase" type="checkbox" />
+            <label for="CapitalCase"></label>
+          </div>
+          <label for="CapitalCase">Capital case</label>
+        </div>
+
+        <div class="checkbox-wrapper-5">
+          <div class="check">
+            <input id="Numbers" type="checkbox" />
+            <label for="Numbers"></label>
+          </div>
+          <label for="Numbers">Numbers</label>
+        </div>
+
+        <div class="checkbox-wrapper-5">
+          <div class="check">
+            <input id="Symbols" type="checkbox" />
+            <label for="Symbols"></label>
+          </div>
+          <label for="Symbols">Symbols</label>
+        </div>
+      </div>
+
+      <div id="passwordLengthContainer">
+        <input type="number" name="passwordLength" id="passlength" min="1" />
+        <label for="passlength">Length</label>
+      </div>
+
+      <button onclick="generatePass()" class="button-33">Generate!</button>
+    </div>
+
+    <div class="optionsContainer" id="generatedPassContainer">
+      <p id="password"></p>
+      <img
+        src="https://cdn-icons-png.flaticon.com/128/7525/7525721.png"
+        title="Click to Copy"
+        id="clipIcon"
+        onclick="copyToClipboard()"
+      />
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
